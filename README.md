@@ -53,9 +53,9 @@ Compute height ratios → Grade 0–3
 ### Model 1 — Vertebra Segmentation (YOLOv8n-seg)
 | Metric | Value |
 |---|---|
-| Box mAP50 (validation) | 88.5% |
-| Mask mAP50 (validation) | 89.0% |
-| Training epochs | 94 (early stopped) |
+| Box mAP50 (validation) | 89.3% |
+| Mask mAP50 (validation) | 90.3% |
+| Training epochs | 114 (best epoch 112) |
 
 ### Model 2 — Lumbar Classifier (EfficientNet-B0)
 | Metric | Value |
@@ -217,7 +217,7 @@ Each preprocessed subject dictionary contains:
 | LR schedule | Reduce on plateau ×0.5 | Cosine annealing | YOLO default |
 | Max epochs | 200 | 50 | 200 |
 | Early stopping | Patience 20 | Patience 10 | Patience 20 |
-| Best epoch | — | 24 | 94 / 83 |
+| Best epoch | — | 24 | 112 / 63 |
 | Loss | Binary cross-entropy | BCE with logits | YOLO pose loss |
 | AMP | Yes | Yes | Yes |
 | Seed | 42 | 42 | — |
